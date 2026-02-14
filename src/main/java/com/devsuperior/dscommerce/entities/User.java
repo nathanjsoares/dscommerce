@@ -13,26 +13,26 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nome;
+    private String name;
 
     @Column(unique = true)
     private String email;
     private String phone;
-    private LocalDate birthdate;
+    private LocalDate birthDate;
     private String password;
 
     @OneToMany(mappedBy = "client")
     private List<Order> orders = new ArrayList<>();
 
-    public User(){
+    public User() {
     }
 
-    public User(Long id, String nome, String email, String phone, LocalDate birthdate, String password) {
+    public User(Long id, String name, String email, String phone, LocalDate birthDate, String password) {
         this.id = id;
-        this.nome = nome;
+        this.name = name;
         this.email = email;
         this.phone = phone;
-        this.birthdate = birthdate;
+        this.birthDate = birthDate;
         this.password = password;
     }
 
@@ -44,12 +44,12 @@ public class User {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {
@@ -68,12 +68,12 @@ public class User {
         this.phone = phone;
     }
 
-    public LocalDate getBirthdate() {
-        return birthdate;
+    public LocalDate getBirthDate() {
+        return birthDate;
     }
 
-    public void setBirthdate(LocalDate birthdate) {
-        this.birthdate = birthdate;
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
     }
 
     public String getPassword() {
