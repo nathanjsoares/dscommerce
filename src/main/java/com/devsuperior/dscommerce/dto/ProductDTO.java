@@ -13,12 +13,20 @@ public class ProductDTO {
     public ProductDTO(){
     }
 
-    public ProductDTO(Product entitie) {
-        id = entitie.getId();
-        name = entitie.getName();
-        description = entitie.getDescription();
-        price = entitie.getPrice();
-        imgUrl = entitie.getImgUrl();
+    public ProductDTO(Long id, String name, String description, Double price, String imgUrl) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.price = price;
+        this.imgUrl = imgUrl;
+    }
+
+    public ProductDTO(Product entity) {
+        id = entity.getId();
+        name = entity.getName();
+        description = entity.getDescription();
+        price = entity.getPrice();
+        imgUrl = entity.getImgUrl();
     }
 
     public Long getId() {
