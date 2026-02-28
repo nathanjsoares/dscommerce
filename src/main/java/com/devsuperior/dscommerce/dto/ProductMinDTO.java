@@ -38,4 +38,5 @@ public class ProductMinDTO {
     public String getImgUrl() {
         return imgUrl;
     }
+
 }
