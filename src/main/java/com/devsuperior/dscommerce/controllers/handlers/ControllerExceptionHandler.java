@@ -50,4 +50,5 @@ public class ControllerExceptionHandler {
         CustomErrorDTO err = new CustomErrorDTO(Instant.now(), status.value(), e.getMessage(), request.getRequestURI());
         return ResponseEntity.status(status).body(err);
     }
+
 }
