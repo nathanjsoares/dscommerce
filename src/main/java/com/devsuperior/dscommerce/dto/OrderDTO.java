@@ -77,5 +77,4 @@ public class OrderDTO {
 		}
 		return sum;
 	}
-
 }
