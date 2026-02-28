@@ -27,4 +27,5 @@ public class CategoryDTO {
 	public String getName() {
 		return name;
 	}
+
 }
