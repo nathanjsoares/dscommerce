@@ -26,4 +26,5 @@ public class PaymentDTO {
 	public Instant getMoment() {
 		return moment;
 	}
+
 }

@@ -52,4 +52,5 @@ public class OrderItemDTO {
 	public String getImgUrl() {
 		return imgUrl;
 	}
+
 }

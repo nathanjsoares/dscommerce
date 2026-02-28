@@ -24,4 +24,5 @@ public class ClientDTO {
 	public String getName() {
 		return name;
 	}
+
 }
