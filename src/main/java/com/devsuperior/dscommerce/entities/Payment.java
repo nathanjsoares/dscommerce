@@ -20,7 +20,7 @@ public class Payment {
     @MapsId
     private Order order;
 
-    public Payment(){
+    public Payment() {
     }
 
     public Payment(Long id, Instant moment, Order order) {
@@ -59,11 +59,12 @@ public class Payment {
         if (o == null || getClass() != o.getClass()) return false;
 
         Payment payment = (Payment) o;
+
         return Objects.equals(id, payment.id);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(id);
+        return id != null ? id.hashCode() : 0;
     }
 }

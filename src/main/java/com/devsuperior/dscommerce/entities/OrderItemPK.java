@@ -42,13 +42,15 @@ public class OrderItemPK {
         if (o == null || getClass() != o.getClass()) return false;
 
         OrderItemPK that = (OrderItemPK) o;
-        return Objects.equals(order, that.order) && Objects.equals(product, that.product);
+
+        if (!Objects.equals(order, that.order)) return false;
+        return Objects.equals(product, that.product);
     }
 
     @Override
     public int hashCode() {
-        int result = Objects.hashCode(order);
-        result = 31 * result + Objects.hashCode(product);
+        int result = order != null ? order.hashCode() : 0;
+        result = 31 * result + (product != null ? product.hashCode() : 0);
         return result;
     }
 }
